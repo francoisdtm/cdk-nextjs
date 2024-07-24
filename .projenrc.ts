@@ -69,7 +69,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@aws-sdk/client-s3',
     '@aws-sdk/lib-storage',
     '@mrgrain/jsii-struct-builder',
-    '@smithy/signature-v4',
     '@types/adm-zip',
     '@types/aws-lambda',
     '@types/micromatch',
@@ -87,7 +86,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
 });
 
 project.bundler.addBundle('./src/lambdas/nextjs-bucket-deployment.ts', commonBundlingOptions);
-project.bundler.addBundle('./src/lambdas/sign-fn-url.ts', commonBundlingOptions);
 
 const buildWorkflow = project.tryFindObjectFile('.github/workflows/build.yml');
 buildWorkflow?.patch(JsonPatch.replace('/jobs/build/steps/3/run', 'npx projen compile && npx projen build'));

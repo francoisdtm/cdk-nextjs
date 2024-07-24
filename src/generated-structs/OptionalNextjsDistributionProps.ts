@@ -16,12 +16,6 @@ export interface OptionalNextjsDistributionProps {
    */
   readonly nextDomain?: NextjsDomain;
   /**
-   * Override lambda function url auth type.
-   * @default "NONE"
-   * @stability stable
-   */
-  readonly functionUrlAuthType?: aws_lambda.FunctionUrlAuthType;
-  /**
    * @stability stable
    */
   readonly distribution?: aws_cloudfront.Distribution;

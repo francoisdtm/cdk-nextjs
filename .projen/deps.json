@@ -17,10 +17,6 @@
       "type": "build"
     },
     {
-      "name": "@smithy/signature-v4",
-      "type": "build"
-    },
-    {
       "name": "@types/adm-zip",
       "type": "build"
     },
